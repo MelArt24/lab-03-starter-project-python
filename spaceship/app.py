@@ -5,6 +5,8 @@ from starlette.responses import FileResponse
 from spaceship.config import Settings
 from spaceship.routers import api, health
 
+# Very important comment
+
 
 def make_app(settings: Settings) -> FastAPI:
     app = FastAPI(
@@ -23,6 +25,6 @@ def make_app(settings: Settings) -> FastAPI:
 
     @app.get('/', include_in_schema=False, response_class=FileResponse)
     async def root() -> str:
-        return 'build/index.html'
+        return 'Artem Melnychenko'
 
     return app
