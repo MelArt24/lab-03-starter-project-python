@@ -25,6 +25,6 @@ def make_app(settings: Settings) -> FastAPI:
 
     @app.get('/', include_in_schema=False, response_class=FileResponse)
     async def root() -> str:
-        return 'Artem Melnychenko with bad version(2) of Dockerfile'
+        return 'Artem Melnychenko with better version(2) of Dockerfile'
 
     return app
